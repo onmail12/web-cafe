@@ -32,8 +32,8 @@ class DatabaseSeeder extends Seeder
             'keterangan' => 'minuman',
         ]);
 
-        Meja::create();
-        Meja::create();
-        Meja::create();
+        for($i=0;$i<=9;$i++){
+            Meja::create();
+        }
     }
 }

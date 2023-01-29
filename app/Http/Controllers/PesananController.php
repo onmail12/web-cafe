@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Menu;
 use Illuminate\Http\Request;
 use App\Models\Pesanan;
 
@@ -16,8 +15,10 @@ class PesananController extends Controller
         return view('pesanan', compact('pesanans'));
     }
 
-    public function add(Request $request)
+    public function add()
     {
+        // meja_id is randomized
+
         $cartItems = \Cart::getContent();
         $makanan_json = array();
         foreach ($cartItems as $menu) {
@@ -26,7 +27,7 @@ class PesananController extends Controller
         }
 
         Pesanan::create([
-            'meja_id' => 1,
+            'meja_id' => mt_rand(1, 10),
             'makanan' => $makanan_json
         ]);
 

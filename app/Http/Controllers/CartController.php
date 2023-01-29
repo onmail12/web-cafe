@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Darryldecode\Cart;
 use App\Models\Menu;
 use App\Models\Pesanan;
 
@@ -17,7 +16,7 @@ class CartController extends Controller
 
     public function add(Menu $menu, Request $request)
     {
-        Cart::add([
+        \Cart::add([
             'id' => $request->id,
             'name' => $request->nama,
             'price' => $request->harga,
