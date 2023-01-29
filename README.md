@@ -6,7 +6,9 @@
 </p>
 
 ## Install darryldecode / laravelshoppingcart
-Install the package through [Composer](http://getcomposer.org/). 
+Install the package through [Composer](http://getcomposer.org/).
+
+ 
 ```composer require "darryldecode/cart"```
 
 ## About Laravel
